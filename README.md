@@ -24,7 +24,13 @@ The framework combines two optimization stages:
    - Performs gradient-based optimization of object amplitude, phase, and propagation distance.
    - Uses an angular-spectrum forward model.
    - Enforces physical constraints on object-sensor distance.
-   - Reconstructs individual overlapped tiles and stitches the non-overlapped cores into full-field images.
+  
+3. **Inner physics-guided reconstruction**
+- Amplitude is assembled using normalised Hann-weighted averaging.
+- Phase is assembled using Hann-weighted circular averaging.
+
+The overlap fraction is defined relative to the core width. It controls the enlargement around each core rather than reducing the core stride.
+
 
 ## Main Features
 
@@ -34,7 +40,6 @@ The framework combines two optimization stages:
 - Bounded object-sensor distance optimization.
 - Angular-spectrum propagation model implemented in PyTorch.
 - Multi-objective GP fitness based on reconstruction SSIM, runtime, and symbolic tree size.
-- Automatic saving of reconstructed tiles and stitched full-field outputs.
 - GPU support when CUDA is available.
 
 ## Repository Contents
