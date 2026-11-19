@@ -45,8 +45,7 @@ The main script performs the complete workflow:
 2. Divide the image into overlapped tiles.
 3. Evolve GP policies for reconstruction hyperparameters.
 4. Apply the best evolved policy to all tiles.
-5. Save reconstructed tile outputs.
-6. Stitch the full-field amplitude, intensity, and phase reconstructions.
+5. Stitch the full-field amplitude, intensity, and phase reconstructions.
 
 ## Requirements
 
